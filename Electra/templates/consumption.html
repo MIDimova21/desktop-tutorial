@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/consumption.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+{% endblock %}
+
+{% include 'header.html' %}
+
+{% block content %}
+   <table>
+        <caption>Electricity Usage of Household Appliances</caption>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price for 1kWh (BGN)</th>
+                <th>Consumption per Hour (kWh)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row.product_name }}</td>
+                <td>{{ row.price_per_hour }} lev</td>
+                <td>{{ row.consumption_per_hour }} kWh</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+   </table>
+
+    <div class="calc">
+        <div class="container">
+            <h1>Calculator</h1>
+            <p>Here you can select the product on which you want to calculate the total price and consumption for specified time.</p>
+
+            <form id="calculator-form">
+                <label for="product">Select the product:</label>
+                <select id="product" name="product">
+                    {% for product in data %}
+                        <option value="{{ product.price_per_hour }}|{{ product.consumption_per_hour }}">
+                            {{ product.product_name }}
+                        </option>
+                    {% endfor %}
+                </select>
+
+                <br>
+                <label for="time">Enter Time (in hours):</label>
+                <input type="number" id="time" name="time" step="0.1" min="0" required>
+
+                <br>
+                <h2>Results:</h2>
+                <div class="output">
+                    <strong>Total Price:</strong> <span id="total-price">0.00</span> lev
+                    <br><br>
+                    <strong>Total Consumption:</strong> <span id="total-consumption">0.00</span> kWh
+                </div>
+            </form>
+        </div>
+
+        <div class="container2">
+            <div>
+                <label id="nameCalc" for="appliance">Daily Calculator</label>
+                <p>Here you can check the average daily price and consumption of the electrical appliance you have in you home.</p>
+                <select id="appliance" multiple>
+                    {% for row in data %}
+                        <option id="multiOption" value="{{ row.price_per_hour }}|{{ row.consumption_per_hour }}|{{row.avr_daily_usage}}">
+                            {{ row.product_name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+            <h2>Results:</h2>
+            <div id="results">
+                <strong>Total Price for day:</strong> <span id="daily-price">0.00</span> lev
+                <br><br>
+                <strong>Total Consumption for day:</strong> <span id="daily-consumption">0.00</span> kWh
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='calculate.js') }}">
+    </script>
+
+{% endblock %}

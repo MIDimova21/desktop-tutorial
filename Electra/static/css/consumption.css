@@ -1,0 +1,83 @@
+table {
+    width: 80%;
+    margin: 180px 80px 0 150px;
+    border-collapse: collapse;
+    padding-top: 500px;
+    background-color: #AE8781;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid black;
+    color: white;
+}
+th {
+    background-color: #7a5f5b;
+    text-align: center;
+
+}
+caption {
+    font-size: 32px;
+    color: #90ADC6;
+    margin-bottom: 40px;
+}
+
+
+
+
+.calc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.container, .container2 {
+    background-color: #90ADC6;
+    color: white;
+    padding: 30px;
+    width: 40%;
+    margin: 0 50px;
+    border: 2px solid #8E8A92;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.output, label, #results {
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+label {
+    font-weight: bold;
+}
+
+
+select, input, option {
+    display: block;
+    margin: 15px;
+    width: 200px;
+    border: 2px solid #8E8A92;
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    color: black;
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+
+
+#appliance {
+    width: 280px;
+    height: auto;
+}
+
+#nameCalc {
+    padding: 0;
+    font-size: 32px;
+    font-weight: bold;
+}

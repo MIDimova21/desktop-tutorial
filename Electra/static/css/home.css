@@ -1,0 +1,89 @@
+.first-view {
+    position: relative;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/green.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-box {
+    max-width: 800px;
+    max-height: 200px;
+    text-align: center;
+    color: white;
+    padding-bottom: 200px;
+    margin-bottom: 100px;
+}
+
+.welcome-box h1 {
+    padding-top: 200px;
+    text-align: center;
+    font-size: 40px;
+    color: #EAEAEA;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-box p {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #90ADC6;
+    margin-top: 170px;
+    padding: 40px;
+    font-size: 20px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+#Question {
+  text-align: center;
+  padding-top: 300px;
+  color: #90ADC6;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #90ADC6;
+    width: 20%;
+    margin: 40px auto;
+}
+
+#slogan {
+  text-align: center;
+  margin: 0 350px 100px 350px;
+  color: black;
+  opacity: 0.8;
+  font-size: 20px;
+}
+
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+}
+
+
+div text {
+    width: 35%;
+    margin: auto;
+    color: black;
+    opacity: 0.8;
+    font-size: 17px;
+}
+div text h2 {
+  color: #90ADC6;
+  text-align: center;
+}
+
+.images {
+    width: 41%;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+

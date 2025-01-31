@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/contact.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+{% endblock %}
+
+{% include 'header.html' %}
+
+{% block content %}
+    <div class="contact-form-container">
+        <h1>Contact Us</h1>
+
+        <form method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+
+        {% if message %}
+            <div class="response-message" style="color: green;">{{ message }}</div>
+        {% elif error %}
+            <div class="response-message" style="color: red;">{{ error }}</div>
+        {% endif %}
+    </div>
+{% endblock %}

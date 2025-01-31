@@ -1,0 +1,50 @@
+header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: #EAEAEA;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+
+
+.logo {
+  margin: 0 0 0 30px;
+  width: 120px;
+  height: auto;
+}
+
+nav a {
+  color: #AE8781;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+nav a:hover {
+    color: #8E8A92;
+    padding-bottom: 34px;
+    border-bottom: 4px solid #8E8A92;
+}
+
+
+#logout {
+  background-color: #90ADC6;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  margin-right: 40px;
+}
+
+#logout:hover {
+  background-color: white;
+  border: 1px solid #AE8781;
+  color: #AE8781;
+}

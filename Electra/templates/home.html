@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+{% endblock %}
+
+{% include 'header.html' %}
+
+{% block content %}
+    <div class="first-view">
+        <div class="welcome-box">
+            <h1>Welcome to Electra!</h1>
+            <p>Electra is here to help you start living in a more economical and eco-friendly way, bringing benefits to both you and the environment. On the website, you can easily track the electricity usage of any product over a specific period of time during the day or for a whole day. This will allow you to understand how much energy each product uses and how that affects your electricity bills. By monitoring your consumption, you can make more informed decisions to reduce energy waste, save money, and contribute to a greener planet.</p>
+        </div>
+    </div>
+    <h1 id="Question">How to save energy at home?</h1>
+    <hr>
+    <p id="slogan">Reasonable energy consumption contributes not only to saving natural resources, but also leads to a reduction in energy costs. This is possible without having to compromise on the comfort of your home.</p>
+    <div class="box">
+        <img src="../static/images/Heating.jpg" alt="Heating" class="images">
+        <text>
+            <h2>Heating</h2><br>
+            <p>Do not cover or block the heating devices with furniture or heavy curtains, so as not to stop the heat they emit into the room.</p><br>
+            <p>Ventilate the premises regularly with wide open doors and windows, but briefly to preserve the warmth of the walls.</p><br>
+            <p>Reduce the heating degrees at night and when you are away from home. Avoid turning them off completely, because this way the walls of the home cool down and subsequently the appliances consume more energy to reach the desired high temperature again.</p>
+        </text>
+    </div>
+    <div class="box">
+        <text>
+            <h2>Lighting</h2><br>
+            <p>Replace incandescent lamps with energy-saving or LED lamps. In the table below you can compare the costs against the amount of energy consumed and the life span of a lamp.</p><br>
+            <p>Turn off the lights when you leave the room for longer than 10 minutes.</p><br>
+            <p>Another way to optimize energy consumption is to install lighting control devices. These are the so-called potentiometers, or even dimmers, through which you can reduce or increase the power of the device.</p>
+        </text>
+        <img src="../static/images/Light.jpg" alt="Light" class="images">
+    </div>
+    <div class="box">
+        <img src="../static/images/Cooking.jpg" alt="Cooking" class="images">
+        <text>
+            <h2>Cooking</h2><br>
+            <p>Use a pot with a diameter corresponding to the stove so that there is no loss of heat.</p><br>
+            <p>Check that you have not put too much unnecessary cooking water in the pot. The less water is heated, the less energy is used.</p><br>
+            <p>Cover the pot with a lid to reduce cooking time.</p><br>
+            <p>For dishes that take a long time to cook, use a pressure cooker.</p>
+        </text>
+    </div>
+    <div class="box">
+        <text>
+            <h2>Laundry</h2><br>
+            <p>Use the full capacity of the washing machine.</p><br>
+            <p>Use energy-saving programs.</p><br>
+            <p>Skip the pre-wash when there is no heavy soiling.</p><br>
+            <p>If possible, reduce the washing temperature from 60° to 40° or 30° degrees.</p>
+        </text>
+        <img src="../static/images/Washing.jpg" alt="Washing" class="images">
+    </div>
+{% endblock %}
